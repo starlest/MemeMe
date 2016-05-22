@@ -14,6 +14,8 @@
 		6DD0522D1CF1DB3A00406424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD0522B1CF1DB3A00406424 /* LaunchScreen.storyboard */; };
 		6DD052381CF1DB3A00406424 /* Meme_MeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD052371CF1DB3A00406424 /* Meme_MeTests.swift */; };
 		6DD052431CF1DB3A00406424 /* Meme_MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD052421CF1DB3A00406424 /* Meme_MeUITests.swift */; };
+		6DD052511CF21E0200406424 /* ViewController+KeyboardNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD052501CF21E0200406424 /* ViewController+KeyboardNotifications.swift */; };
+		6DD052531CF21E9500406424 /* ViewController+TextFieldBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD052521CF21E9500406424 /* ViewController+TextFieldBehavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		6DD0523E1CF1DB3A00406424 /* Meme MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meme MeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD052421CF1DB3A00406424 /* Meme_MeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme_MeUITests.swift; sourceTree = "<group>"; };
 		6DD052441CF1DB3A00406424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DD052501CF21E0200406424 /* ViewController+KeyboardNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+KeyboardNotifications.swift"; sourceTree = "<group>"; };
+		6DD052521CF21E9500406424 /* ViewController+TextFieldBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TextFieldBehavior.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,8 @@
 		6DD052211CF1DB3A00406424 /* Meme Me */ = {
 			isa = PBXGroup;
 			children = (
+				6DD052541CF21F1000406424 /* ViewControllers */,
 				6DD052221CF1DB3A00406424 /* AppDelegate.swift */,
-				6DD052241CF1DB3A00406424 /* ViewController.swift */,
 				6DD052261CF1DB3A00406424 /* Main.storyboard */,
 				6DD052291CF1DB3A00406424 /* Assets.xcassets */,
 				6DD0522B1CF1DB3A00406424 /* LaunchScreen.storyboard */,
@@ -123,6 +127,16 @@
 				6DD052441CF1DB3A00406424 /* Info.plist */,
 			);
 			path = "Meme MeUITests";
+			sourceTree = "<group>";
+		};
+		6DD052541CF21F1000406424 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6DD052241CF1DB3A00406424 /* ViewController.swift */,
+				6DD052521CF21E9500406424 /* ViewController+TextFieldBehavior.swift */,
+				6DD052501CF21E0200406424 /* ViewController+KeyboardNotifications.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DD052531CF21E9500406424 /* ViewController+TextFieldBehavior.swift in Sources */,
 				6DD052251CF1DB3A00406424 /* ViewController.swift in Sources */,
 				6DD052231CF1DB3A00406424 /* AppDelegate.swift in Sources */,
+				6DD052511CF21E0200406424 /* ViewController+KeyboardNotifications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +500,7 @@
 				6DD052491CF1DB3A00406424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DD0524A1CF1DB3A00406424 /* Build configuration list for PBXNativeTarget "Meme MeTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +509,7 @@
 				6DD0524C1CF1DB3A00406424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DD0524D1CF1DB3A00406424 /* Build configuration list for PBXNativeTarget "Meme MeUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +518,7 @@
 				6DD0524F1CF1DB3A00406424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
