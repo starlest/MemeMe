@@ -2,16 +2,19 @@
 <module type="CIDR_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/Meme Me/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Meme Me/Base.lproj/Main.storyboard" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Meme Me/Assets.xcassets" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Meme Me/ViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Meme Me/MemeEditorViewController+TextFieldBehavior.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Meme Me/Meme.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Meme Me/AppDelegate.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Meme Me/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Meme Me/Assets.xcassets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Meme Me/MemeEditorViewController+KeyboardNotifications.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Meme Me/MemeEditorViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Meme Me/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Meme Me/Base.lproj/Main.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Meme MeUITests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Meme MeUITests/Meme_MeUITests.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Meme MeTests/Meme_MeTests.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Meme MeTests/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Meme MeTests/Meme_MeTests.swift" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
