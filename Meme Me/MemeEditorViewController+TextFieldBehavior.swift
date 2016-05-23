@@ -13,8 +13,8 @@ extension MemeEditorViewController {
     
     func setUpTextField(textField: UITextField) {
         let memeTextAttributes = [
-            NSStrokeColorAttributeName : UIColor.whiteColor(),
-            NSForegroundColorAttributeName : UIColor.blackColor(),
+            NSStrokeColorAttributeName : UIColor.blackColor(),
+            NSForegroundColorAttributeName : UIColor.whiteColor(),
             NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 38)!,
             NSStrokeWidthAttributeName : -3.6
         ]
