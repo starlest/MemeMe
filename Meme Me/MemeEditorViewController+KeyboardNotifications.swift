@@ -1,5 +1,5 @@
 //
-//  ViewController+KeyboardNotifications.swift
+//  MemeEditorViewController+KeyboardNotifications.swift
 //  Meme Me
 //
 //  Created by Edwin Chia on 23/5/16.
@@ -20,7 +20,7 @@ extension MemeEditorViewController {
     func keyboardWillShow(notification: NSNotification) {
         // Do not need to adjust for topTextField as it is still visible along with the keyboard
         if (bottomTextField.editing) {
-            view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y = getKeyboardHeight(notification) * (-1)
         }
     }
     

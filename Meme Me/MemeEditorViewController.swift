@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorViewController.swift
 //  Meme Me
 //
 //  Created by Edwin Chia on 22/5/16.
@@ -20,13 +20,15 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBOutlet weak var bottomToolBar: UIToolbar!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var albumButton: UIBarButtonItem!
     
     var memedImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         shareButton.enabled = false
-        setUpTextFields()
+        setUpTextField(topTextField)
+        setUpTextField(bottomTextField)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -42,16 +44,20 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
 
     @IBAction func pickAnImageFromAlbum(sender: AnyObject) {
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
+        let pickerController = setUpPickerController(false)
         presentViewController(pickerController, animated: true, completion: nil)
     }
 
     @IBAction func pickAnImageFromCamera(sender: AnyObject) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        presentViewController(imagePicker, animated: true, completion: nil)
+        let pickerController = setUpPickerController(true)
+        presentViewController(pickerController, animated: true, completion: nil)
+    }
+    
+    func setUpPickerController(useCamera: Bool) -> UIImagePickerController {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = useCamera ? UIImagePickerControllerSourceType.PhotoLibrary : UIImagePickerControllerSourceType.PhotoLibrary
+        return pickerController
     }
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -68,7 +74,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         activityViewController.completionWithItemsHandler = {(activity, success, items, error) in
             self.save()
         }
-        self.presentViewController(activityViewController, animated: true, completion: nil)
+        presentViewController(activityViewController, animated: true, completion: nil)
     }
     
     func generateMemedImage() -> UIImage

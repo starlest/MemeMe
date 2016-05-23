@@ -98,6 +98,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="albumButton" destination="FN6-uY-elB" id="c8A-9d-ozz"/>
                         <outlet property="bottomTextField" destination="e8S-j6-imf" id="Roa-XZ-PHn"/>
                         <outlet property="bottomToolBar" destination="iRe-uZ-qBp" id="KWp-Y5-eMK"/>
                         <outlet property="cameraButton" destination="Ldb-De-Ti2" id="2TS-ev-nnE"/>

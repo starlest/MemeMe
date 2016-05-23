@@ -1,5 +1,5 @@
 //
-//  ViewController+TextFieldBehavior.swift
+//  MemeEditorViewController+TextFieldBehavior.swift
 //  Meme Me
 //
 //  Created by Edwin Chia on 23/5/16.
@@ -11,24 +11,23 @@ import UIKit
 
 extension MemeEditorViewController {
     
-    func setUpTextFields() {
+    func setUpTextField(textField: UITextField) {
         let memeTextAttributes = [
             NSStrokeColorAttributeName : UIColor.whiteColor(),
             NSForegroundColorAttributeName : UIColor.blackColor(),
             NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 38)!,
-            NSStrokeWidthAttributeName : 10
+            NSStrokeWidthAttributeName : -3.6
         ]
         
-        topTextField.delegate = self
-        bottomTextField.delegate = self
-        topTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.textAlignment = .Center
-        bottomTextField.textAlignment = .Center
+        textField.delegate = self
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .Center
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        textField.text = ""
+        if textField.text == "TOP" || textField.text == "BOTTOM" {
+            textField.text = ""
+        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
