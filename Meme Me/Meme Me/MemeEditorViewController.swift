@@ -105,10 +105,16 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         let bottomText = bottomTextField.text!
         let originalImage = imagePickerView.image
         let meme = Meme(topText: topText, bottomText: bottomText, originalImage: originalImage!, memedImage: memedImage!)
+
+        // Add it to the memes array in the Application Delegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.memes.append(meme)
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func cancel(sender: AnyObject) {
-        SetUIToDefaultState()
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func SetUIToDefaultState() {
