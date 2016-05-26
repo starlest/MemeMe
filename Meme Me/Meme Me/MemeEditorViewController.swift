@@ -70,7 +70,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         memedImage = generateMemedImage()
         let activityViewController = UIActivityViewController(activityItems: [memedImage!], applicationActivities: nil)
         activityViewController.completionWithItemsHandler = {(activity, success, items, error) in
-            self.save()
+            if (success) {
+                self.save()
+            }
         }
         presentViewController(activityViewController, animated: true, completion: nil)
     }

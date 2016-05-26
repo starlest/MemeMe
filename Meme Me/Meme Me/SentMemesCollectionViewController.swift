@@ -52,6 +52,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         let selectedMeme = memes[indexPath.item]
         let controller = storyboard?.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         controller.image = selectedMeme.memedImage
+        controller.index = indexPath.item
         navigationController?.pushViewController(controller, animated: true)
     }
     

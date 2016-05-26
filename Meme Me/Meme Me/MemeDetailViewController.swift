@@ -13,11 +13,18 @@ class MemeDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var image: UIImage?
+    var index: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (image != nil) {
-            imageView.image = image
+        if let safeImage = image{
+            imageView.image = safeImage
         }
+    }
+    
+    @IBAction func deleteMeme(sender: AnyObject) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.memes.removeAtIndex(index!)
+        navigationController?.popViewControllerAnimated(true)
     }
 }
